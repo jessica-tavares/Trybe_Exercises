@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Digite seu nome: "
+read nome
+
+
+read -p "Digite sua idade: " idade
+
+echo "<idade e > " $idade
+echo "nome e> " $nome
