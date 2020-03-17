@@ -1,6 +1,8 @@
 #!/bin/bash
-# Eu sou Tryber e...
 
+#Vou term muito sucesso na programaçao!"
+
+# Eu sou Tryber e...
 
 var1="Marcelo"
 var2="Joao"
