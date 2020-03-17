@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Vou term muito sucesso na programaçao!"
+#Vou tem muito sucesso na programaçao!"
 
 # Eu sou Tryber e...
 
