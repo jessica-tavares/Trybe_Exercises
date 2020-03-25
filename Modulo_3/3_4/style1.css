@@ -1,9 +1,13 @@
 body{
     background-color: rgb(248, 222, 134);
+    overflow: visible;
+    width: 1250px;
+    overflow-x: hidden;
+
 }
 #titulo{
     text-align: center;
-    font-size: larger;
+    font-size: 50px;
     color: purple;
 }
 h1 {
@@ -29,7 +33,7 @@ h1 {
 #img-one {
     border-radius: 50px;
     float: left;
-    width: 40%;
+    width: 30%;
     margin-left: 50px;
     padding: 6px;
 }
@@ -51,7 +55,7 @@ h1 {
 #img-two {
     border-radius: 50px;
     float: left;
-    width: 40%;
+    width: 30%;
     margin-left: 50px;
     padding: 6px;
 }
@@ -64,8 +68,13 @@ h1 {
     border-width: 50%;
     text-align: left;
 }
+#soco-poderoso {
+    margin-left: 50px;
+}
 #video {
-    align-items: center;
+    display: block;
+    margin: auto;
+    width: 40%;
 }
 #last-ccuriosities {
     overflow: hidden;
@@ -76,32 +85,37 @@ h1 {
 #img-three {
     border-radius: 50px;
     float: left;
-    width: 40%;
+    width: 35%;
     margin-left: 50px;
     padding: 6px;
 }
 #info-three {
-    margin-left: 500px;
     text-align: left;
     line-height: 1.5;
     font-family:'Times New Roman', Times, serif;
     font-size: 18px;
     float: right;
-    width: 60%;
+    width: 50%;
     border-style: none;
     border-width: 50%;
 }
 #buttom {
-    background-color: rgb(208, 83, 240); 
-    color: black;
-    padding: 15px 20px;
-    border-radius: 4px;
+    background-color: rgb(208, 83, 240);
+    padding: 5px 10px;
+    border-radius: 4px; 
+    border: 2px black;
+    margin: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#buttom a{
     text-decoration: none;
-    line-height: 55px;
+    color: black;
+    font-weight: bold;
 }
 #rodape {
-    text-align: left;
     position: relative;
-    bottom: 5px;
-    left: 5px;
+    margin-left: 900px;
+    font-size: 10px;
+    margin-bottom: 5px;
 }
