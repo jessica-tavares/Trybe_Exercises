@@ -1,10 +1,13 @@
-let salarioBruto = 3000.00;
+let salarioBruto = 1000.00;
 let salarioBrutoSemINSS = undefined;
 let descontoINSS = undefined;
 let descontoIR = undefined;
-let sal
+let salarioLiquido = undefined;
 
-//Calculo do desconto do INSS
+//Calculo do INSS
+if (salarioBruto<=1556.95){
+  descontoINSS = salarioBruto*0.08;
+}
 if ( salarioBruto>1556.95 && salarioBruto<2594.92 ){
   descontoINSS = salarioBruto*0.09;
 }
@@ -33,6 +36,8 @@ if ( salarioBrutoSemINSS>3751.06 && salarioBrutoSemINSS<4664.68){
 }
 if ( salarioBrutoSemINSS>4664.68){
   descontoIR = (salarioBrutoSemINSS*0.275) - 869.36;
+} else {
+  descontoIR = 0;
 }
 
 salarioLiquido = salarioBrutoSemINSS - descontoIR;
