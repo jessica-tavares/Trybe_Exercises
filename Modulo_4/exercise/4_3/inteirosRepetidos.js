@@ -16,6 +16,7 @@ function inteirosRepetidos(array){
   for (let k=1; k<numDeVezes.length; k++){
     if(numDeVezes[k]>test){
       indice = k;
+      test = numDeVezes[k];
     }
   }
   return array[indice];
