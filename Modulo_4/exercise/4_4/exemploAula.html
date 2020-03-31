@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="estilo">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class ="estilo">Segundo parágrafo!</p>
+
+    <script>
+      //var paragraph = document.getElementById("paragraph");
+      //paragraph.style.color = "red";
+      // Pegue o title da Página e modifique ele para o nome do seu filme favorito.
+      var title = document.getElementById("page-title")
+      title = "A onda";
+      // Recupere e altere o segundo Paragrafo.
+      var secondParagraph = document.getElementById("second-paragraph")
+      secondParagraph = "Any diferente text just for finish the exercise.";
+      // Recupere e modifique o subtitle
+      var subtitle = document.getElementById("subtitle")
+      subtitle = "some subtilte, I hope it works!";
+      console.log(subtitle);
+      //Recupere as classes criadas
+      var estiloclass = document.getElementsByClassName("estilo")
+      // Modifique a cor do primeiro paragrafo da class
+      estiloclass[0].style.color = "green";
+      // Recuperando o Subtitle
+      var recovery = document.getElementsByTagName("h4")
+      
+
+    </script>
+  </body>
+</html>
