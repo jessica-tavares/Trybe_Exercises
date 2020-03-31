@@ -1,4 +1,4 @@
-let number = 9;
+let number = 983;
 let verifDivisor = undefined;
 
 for (let i=2; i<number; i++){
