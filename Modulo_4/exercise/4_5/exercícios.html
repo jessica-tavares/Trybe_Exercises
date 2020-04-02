@@ -71,6 +71,11 @@
       centerContent.className = 'center-content';
       document.getElementsByClassName('main-content')[0].appendChild(centerContent);
 
+      //Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let paragrafoOne = document.createElement("p");
+      paragrafoOne.innerHTML = "Adicionando um testo para concluir o exercício!";
+      document.getElementsByClassName("center-content")[0].appendChild(paragrafoOne);
+
     </script>
   </body>
 </html>
