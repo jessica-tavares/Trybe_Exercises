@@ -73,7 +73,7 @@
 
       //Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
       let paragrafoOne = document.createElement("p");
-      paragrafoOne.innerHTML = "Adicionando um testo para concluir o exercício!";
+      paragrafoOne.innerHTML = "Adicionando um texto para concluir o exercício!";
       document.getElementsByClassName("center-content")[0].appendChild(paragrafoOne);
 
       //Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
@@ -81,7 +81,16 @@
       leftContent.className = 'left-content';
       document.getElementsByClassName("main-content")[0].appendChild(leftContent);
 
-      
+      //Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      let rightContent = document.createElement('div');
+      rightContent.className = "right-content";
+      document.getElementsByClassName("main-content")[0].appendChild(rightContent);
+
+      //Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5
+      let firstImg = document.createElement("img");
+      firstImg.src = "https://picsum.photos/200";
+      firstImg.className = "small-image"
+      document.getElementsByClassName("left-content")[0].appendChild(firstImg);
 
 
 
