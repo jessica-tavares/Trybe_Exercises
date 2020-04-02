@@ -114,7 +114,12 @@
         document.getElementsByTagName('h3')[i].className = "description"
         }
         leftContent.parentNode.removeChild(leftContent);
-      
+        rightContent.style.marginRight = "auto";
+        centerContent.style.backgroundColor = "green";
+        var ultimo = document.getElementsByTagName('li')[9];
+        var penultimo = document.getElementsByTagName('li')[8];
+        ultimo.parentNode.removeChild(ultimo);
+        penultimo.parentNode.removeChild(penultimo);
 
     </script>
   </body>
