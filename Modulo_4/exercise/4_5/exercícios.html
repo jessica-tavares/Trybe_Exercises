@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //Adicione a tag h1 com o texto Exercício 4.5 - JavaScript DOM como filho da tag body;
+      let h1 = document.createElement("h1");
+      h1.innerHTML = "Exercício 4.5 - JavaScript DOM";
+      document.body.appendChild(h1)
+
+      //Adicione a tag div com a classe main-content como filho da tag body;
+      let mainContent = document.createElement("div");
+      mainContent.className = 'main-content';
+      document.body.appendChild(mainContent);
+
+      //Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let centerContent = document.createElement("div");
+      centerContent.className = 'center-content';
+      document.getElementsByClassName('main-content')[0].appendChild(centerContent);
+
+      //Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let paragrafoOne = document.createElement("p");
+      paragrafoOne.innerHTML = "Adicionando um texto para concluir o exercício!";
+      document.getElementsByClassName("center-content")[0].appendChild(paragrafoOne);
+
+      //Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let leftContent = document.createElement("div");
+      leftContent.className = 'left-content';
+      document.getElementsByClassName("main-content")[0].appendChild(leftContent);
+
+      //Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      let rightContent = document.createElement('div');
+      rightContent.className = "right-content";
+      document.getElementsByClassName("main-content")[0].appendChild(rightContent);
+
+      //Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5
+      let firstImg = document.createElement("img");
+      firstImg.src = "https://picsum.photos/200";
+      firstImg.className = "small-image"
+      document.getElementsByClassName("left-content")[0].appendChild(firstImg);
+
+      //Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+      let lista = document.createElement("ul");
+      let numbers = ['um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez'];
+      document.getElementsByClassName("right-content")[0].appendChild(lista)
+      for (let i in numbers) {
+        let itens = document.createElement("li");
+        itens.innerHTML = numbers[i];
+        lista.appendChild(itens)
+      }
+
+        //Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+        for (let i=0; i<3; i++){
+          let tagH3 = document.createElement("h3");
+          document.getElementsByClassName("main-content")[0].appendChild(tagH3);
+        }
+
+        //PARTE II
+        document.getElementsByTagName('h1')[0].className = "title";
+        for (let i=0; i<3; i++){
+          document.getElementsByTagName('h3')[i].className = "description"
+        }
+        leftContent.parentNode.removeChild(leftContent);
+        rightContent.style.marginRight = "auto";
+        centerContent.style.backgroundColor = "green";
+        var ultimo = document.getElementsByTagName('li')[9];
+        var penultimo = document.getElementsByTagName('li')[8];
+        ultimo.parentNode.removeChild(ultimo);
+        penultimo.parentNode.removeChild(penultimo);
+
+    </script>
+  </body>
+</html>
