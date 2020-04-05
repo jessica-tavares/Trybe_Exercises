@@ -7,15 +7,22 @@
  <body>
   
   <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
-  
   <script>
-    let image = document.getElementsByTagName('img')[0];
+        let image = document.getElementsByTagName('img')[0];
     image.style.marginLeft = 0;
+    let move = true;
     function catWalk(){
-      image.style.marginLeft = parseInt(image.style.marginLeft) + 10 + 'px';
-      console.log(parseInt(image.style.marginLeft))
-      if (parseInt(image.style.marginLeft) == window.innerWidth){
-        image.style.marginLeft = 0;
+      while (move === true){
+        image.style.marginLeft = parseInt(image.style.marginLeft) + 10 + 'px';
+        if (parseInt(image.style.marginLeft) == window.innerWidth){
+          move = false;
+        } 
+      }
+      while (move === false){
+        image.style.marginLeft = parseInt(image.style.marginLeft) - 10 + 'px';
+        if (parseInt(image.style.marginLeft) == 0){
+          move = true;
+        }
       }
     }
     setInterval(catWalk,50);
