@@ -27,7 +27,7 @@
         <input type="string" id="font-family" size="2">
       <label>Espaçamento da Linha:
         <input type="number" id="line-space" size="2">
-      <label>Tamanho da FOnte:
+      <label>Tamanho da Fonte:
         <input type="number" id="font-size" size="2">
 
       </label>
@@ -53,34 +53,39 @@
       //Leitura dos elementos que vão ser mudados
       let body = document.querySelector("body");
       let paragrafo = document.querySelectorAll('.paragrafo');
-      let titulo = document.querySelectorAll(".mini-title");
-      
-      console.log(titulo)
+      let titulo = document.querySelectorAll('.mine-title');
+
+
       //Funçoes
       function changeBackColor(){
         console.log(backColor.value)
         body.style.backgroundColor = backColor.value;
+        localStorage.setItem('backColor',backColor.value);
       }
       function changeTextColor(){
         for(let i=0; i<titulo.length; i++){
           paragrafo[i].style.color = textColor.value;
           titulo[i].style.color = textColor.value;
         }
+        localStorage.setItem('textColor',textColor.value);
       }
       function changeFontFamily(){
+        localStorage.setItem('fontFamily',fontFamily.value)
         for(let i=0; i<titulo.length; i++){
-          paragrafo[i].style.fontFamily = fontFamily.value;
-          titulo[i].style.fontFamily = fontFamily.value;
+          paragrafo[i].style.fontFamily = localStorage.getItem('fontFamily');
+          titulo[i].style.fontFamily = localStorage.getItem('fontFamily');
         }
       }
       function changeTextSize (){
+        localStorage.setItem('fontSize',fontSize.value);
         for(let i=0; i<titulo.length; i++){
-          paragrafo[i].style.fontSize = fontSize.value +"px";
+          paragrafo[i].style.fontSize = localStorage.getItem('fontSize') +"px";
         }
       }
       function changeSpace(){
-        for(let i=0; i<paragrafo.length;i++){
-          paragrafo[i].style.fontHeigth = line.value +"px";
+        localStorage.setItem('line',line.value);
+        for(let i=0; i<titulo.length;i++){
+          paragrafo[i].style.lineHeight = localStorage.getItem('line') +"px";
         }
       }
 
@@ -90,6 +95,21 @@
       fontFamily.addEventListener("change",changeFontFamily)
       fontSize.addEventListener("change",changeTextSize)
       line.addEventListener("change",changeSpace)
+
+      //chamando o Local Storage quando o browser é reiniciado
+      body.style.backgroundColor = localStorage.getItem('backColor');
+      for(let i=0; i<titulo.length; i++){
+        paragrafo[i].style.color = localStorage.getItem('textColor');
+        titulo[i].style.color = localStorage.getItem('textColor');
+        
+        paragrafo[i].style.fontFamily = localStorage.getItem('fontFamily');
+        titulo[i].style.fontFamily = localStorage.getItem('fontFamily');
+        
+        paragrafo[i].style.fontSize = localStorage.getItem('fontSize') +"px";
+        
+        paragrafo[i].style.lineHeight = localStorage.getItem('line') +"px";
+      }
+
 
 
     </script>
