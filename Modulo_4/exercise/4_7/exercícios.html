@@ -29,6 +29,9 @@
         <input type="number" id="line-space" size="2">
       <label>Tamanho da Fonte:
         <input type="number" id="font-size" size="2">
+        <br>
+      <label>Qual o seu nome por favor:
+        <input type="string" id="person-name" size="2">
 
       </label>
     </section>
@@ -49,6 +52,7 @@
       let fontFamily = document.getElementById("font-family");
       let fontSize = document.getElementById("font-size");
       let line = document.getElementById("line-space");
+      let personName = document.getElementById("person-name");
 
       //Leitura dos elementos que vão ser mudados
       let body = document.querySelector("body");
@@ -95,6 +99,7 @@
       fontFamily.addEventListener("change",changeFontFamily)
       fontSize.addEventListener("change",changeTextSize)
       line.addEventListener("change",changeSpace)
+      personName.addEventListener('change',function(){localStorage.setItem('personName',personName.value)})
 
       //chamando o Local Storage quando o browser é reiniciado
       body.style.backgroundColor = localStorage.getItem('backColor');
@@ -108,6 +113,11 @@
         paragrafo[i].style.fontSize = localStorage.getItem('fontSize') +"px";
         
         paragrafo[i].style.lineHeight = localStorage.getItem('line') +"px";
+      }
+      window.onload = function() {
+        if (personName != null){
+          alert("Welcome again " + localStorage.getItem('personName'));
+        }
       }
 
 
