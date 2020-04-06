@@ -102,23 +102,24 @@
       personName.addEventListener('change',function(){localStorage.setItem('personName',personName.value)})
 
       //chamando o Local Storage quando o browser é reiniciado
-      body.style.backgroundColor = localStorage.getItem('backColor');
-      for(let i=0; i<titulo.length; i++){
-        paragrafo[i].style.color = localStorage.getItem('textColor');
-        titulo[i].style.color = localStorage.getItem('textColor');
+      function inicial (){
+        body.style.backgroundColor = localStorage.getItem('backColor');
+        for(let i=0; i<titulo.length; i++){
+          paragrafo[i].style.color = localStorage.getItem('textColor');
+          titulo[i].style.color = localStorage.getItem('textColor');
         
-        paragrafo[i].style.fontFamily = localStorage.getItem('fontFamily');
-        titulo[i].style.fontFamily = localStorage.getItem('fontFamily');
+          paragrafo[i].style.fontFamily = localStorage.getItem('fontFamily');
+          titulo[i].style.fontFamily = localStorage.getItem('fontFamily');
         
-        paragrafo[i].style.fontSize = localStorage.getItem('fontSize') +"px";
+          paragrafo[i].style.fontSize = localStorage.getItem('fontSize') +"px";
         
-        paragrafo[i].style.lineHeight = localStorage.getItem('line') +"px";
-      }
-      window.onload = function() {
+          paragrafo[i].style.lineHeight = localStorage.getItem('line') +"px";
+        }
         if (personName != null){
           alert("Welcome again " + localStorage.getItem('personName'));
         }
       }
+      window.onload = inicial;
 
 
 
