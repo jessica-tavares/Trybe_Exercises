@@ -2,9 +2,54 @@
 <html>
   <head>
     <meta carset='UTF-8'>
+    <title>Seu curriculo</title>
     <link type='style/css' href='style.css'>
   </head>
   <body>
-    
+    <header>
+      <h1>Preencha o formulário com o seu curriculo!</h1>
+    </header>
+    <form class='formulario' onsubmit='submit()'>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for='nome'>Nome Completo:
+          <input id='nome' type='text' maxlength='40' placeholder='Digite seu nome completo' requeired>
+        </label><br>
+        <label for='email'>E-mail:
+          <input id='email' type='email' maxlength='50' required placeholder='E-mail!'>
+        </label><br>
+        <label for='cpf'>Cpf:
+          <input type='texto' maxlength='11' id='cpf' required placeholder='Entre com seu cpf'>
+        </label><br>
+        <label for='adress'>Endereço:
+          <input type='text' id='adress' maxlength='200' required placeholder='Endereço'>
+        </label><br>
+        <label for='cidade'>Cidade:
+          <input type='text' id='cidade' maxlength='28' required placeholder='Cidade:'>
+        </label><br>
+        <label for='estados'>Estado:</label>
+        <selected id='estados' required>
+
+        </selected><br>
+        <div id='complemento'>
+          <label for='casa'><input type='radio' name='complemento' id='casa' value='casa'>Casa</label>
+          <label for='apartamento'><input type='radio' name='complemento' id='apartamento' value='apartamento'>Apartamento</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Ultimo Emprego</legend>
+        <label for='resume'>Resumo do curriculo</label><br>
+        <textarea id='resume' rows='5' cols='50' maxlength='1000' required>
+        </textarea><br>
+        <label for='cargo'>Cargo
+          <input id='cargo' type='text' maxlenth='40' required></label><br>
+        <label for='descricao'>Descrição do cargo
+          <input id='descricao' type='text' maxlenth='500' required></label><br>
+        <label for='data'>Data de início
+          <input id='data' type='date' required></label><br>
+      </fieldset>
+      <button type='submit'>Enviar</button>
+    </form>
+    <button id='limpar'>Limpar</button>
   </body>
 </html>
