@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>Seu curriculo</title>
+    <link href='bulma-0.8.2/css/bulma.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type='text/css' href='style.css'>
+    <link href="popup-validation/bin/validation.min.css" rel="stylesheet">
+    <script src="popup-validation/bin/validation.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class='title'>Preencha o formulário com o seu curriculo!</h1>
+    </header>
+    <form id='formulario' action=''>
+      <fieldset class='form-group'>
+        <legend>Dados Pessoais</legend>
+        <div class='control'>
+          <label class='label' for='nome'>Nome Completo:
+            <input class="input" id='nome' type='text' maxlength='40' placeholder='Digite seu nome completo' requeired>
+          </label><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='email'>E-mail:
+            <input class="input" id='email' type='email' maxlength='50' pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" placeholder='E-mail!'>
+          </label><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='cpf'>Cpf:
+            <input class="input" type='texto' maxlength='11' id='cpf' required placeholder='Entre com seu cpf'>
+          </label><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='adress'>Endereço:
+          <input class="input" type='text' id='adress' maxlength='200' required placeholder='Endereço'>
+          </label><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='cidade'>Cidade:
+            <input class="input" type='text' id='cidade' maxlength='28' required placeholder='Cidade:'>
+          </label><br>
+        </div>
+        <div class='select is-rounded control'>
+          <label class='label' for='estados'>Estado:
+          <select id='estados' required>
+
+          </select></label>
+        </div>
+        <br>
+        <br>
+        <div class='control'>
+          <label class='radio'><input class="form-control" type='radio' name='complemento' id='casa' value='casa'>Casa</label>
+          <label class='radio'><input class="form-control" type='radio' name='complemento' id='apartamento' value='apartamento'>Apartamento</label>
+        </div>
+      </fieldset>
+      <fieldset class='form-group'>
+        <legend>Ultimo Emprego</legend>
+        <div>
+          <label class='label' for='resume'>Resumo do curriculo</label><br>
+          <textarea class="textarea" id='resume' rows='5' cols='50' maxlength='1000' required>
+          </textarea><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='cargo'>Cargo
+            <input class="input" id='cargo' type='text' maxlenth='40' required></label><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='descricao'>Descrição do cargo
+            <input class="input" id='descricao' type='text' maxlenth='500' required></label><br>
+        </div>
+        <div class='control'>
+          <label class='label' for='data'>Data de início
+            <input class="input" id='data' type='date' required></label><br>
+        </div>
+      </fieldset>
+    </form>
+    <div class='field is-grouped-centered'>
+      <button id='enviar' type='submit' class='button is-primary'>Enviar</button>
+      <button id='limpar' class='button is-ligth'>Limpar</button>
+    </div>
+    <footer id='footer'>
+
+    </footer>
+    <script src='script.js'></script>
+  </body>
+</html>
