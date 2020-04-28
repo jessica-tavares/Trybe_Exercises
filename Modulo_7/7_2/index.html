@@ -18,7 +18,7 @@
         margin-left: 0%;
       }
       to {
-        margin-left: 100%;
+        margin-left: 92%;
       }
     }
 
@@ -48,12 +48,19 @@
     }
 
     #exercise-6 {
-      animation: exercise-1 5s;
-      animation-direction: reverse;
+      animation: exercise-6 5s;
       animation-play-state: paused;
     }
     #exercise-6-square:hover+#exercise-6 {
       animation-play-state: running;
+    }
+    @keyframes exercise-6 {
+      from{
+        margin-left: 92%;
+      }
+      to {
+        margin-left: 0%;
+      }
     }
 
     #exercise-7 {
@@ -127,6 +134,34 @@
       to {
         background-color: green;
         width: 8%;
+      }
+    }
+
+    #exercise-11_1 {
+      animation: exercise-11 3s linear 2s infinite;
+    }
+
+    #exercise-11_2 {
+      animation: exercise-11 3s ease 2s infinite;
+    }
+
+    #exercise-11_3 {
+      animation: exercise-11 3s ease-in 2s infinite;
+    }
+
+    #exercise-11_4 {
+      animation: exercise-11 3s ease-out 2s infinite;
+    }
+
+    #exercise-11_5 {
+      animation: exercise-11 3s ease-in-out 2s infinite;
+    }
+    @keyframes exercise-11 {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: 92%;
       }
     }
 
