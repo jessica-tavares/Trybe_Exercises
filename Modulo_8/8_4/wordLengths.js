@@ -1,0 +1,17 @@
+const assert = require('assert');
+// escreva a função wordLengths para passar nos testes abaixo:
+const wordLengths = (arr) => {
+  let result = [];
+  for (let i in arr) {
+    result[i] = arr[i].length;
+  }
+  return result
+}
+
+//
+const words = ['sun', 'potato', 'roundabout', 'pizza'];
+const expected = [3, 6, 10, 5];
+
+assert.strictEqual(typeof wordLengths, 'function');
+const output = wordLengths(words);
+assert.deepEqual(output, expected);
