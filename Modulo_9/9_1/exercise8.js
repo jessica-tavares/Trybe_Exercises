@@ -90,7 +90,7 @@ const expected_result = [
 function oldBooks() {
   // escreva seu código aqui
   let maisVelhos = books.filter((book) => book.releaseYear <= 1960);
-  return maisVelhos.sort((a, b) => a.realeaseYear - b.releaseYear);
+  return maisVelhos.sort((a, b) => a.realeaseYear - b.releaseYear).reverse();
 }
 
 assert.deepEqual(oldBooks(), expected_result);
